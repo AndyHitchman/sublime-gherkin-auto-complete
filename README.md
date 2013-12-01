@@ -9,7 +9,7 @@ Installation
 
 #### Mac OSX
 
-    cd ~/Library/Application Support/Sublime Text 3/Packages/
+    cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
     git clone git@github.com:AndyHitchman/sublime-gherkin-auto-complete.git GherkinAutoComplete
 
 ### ST2
