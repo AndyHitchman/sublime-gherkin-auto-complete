@@ -24,3 +24,9 @@ For example:
 3. Press enter (or tab) to insert. 
 
 Table data for a phrase is also inserted.
+
+Limitations
+-----------
+1. You need to save a feature file to start indexing
+2. You need to save a modified file to pick-up updates in that file
+3. Changes to feature files made outside of the editor are not detected.
