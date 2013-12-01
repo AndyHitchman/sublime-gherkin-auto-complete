@@ -5,7 +5,30 @@ Provides auto-completion for Given/When/Then/And/But phrases in feature files
 
 Installation
 ------------
-Available in Sublime Text Package Control
+### ST3
+
+#### Mac OSX
+
+    cd ~/Library/Application Support/Sublime Text 3/Packages/
+    git clone git@github.com:AndyHitchman/sublime-gherkin-auto-complete.git GherkinAutoComplete
+
+### ST2
+#### Mac OSX
+
+    cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+    git clone git@github.com:AndyHitchman/sublime-gherkin-auto-complete.git GherkinAutoComplete
+
+#### Linux
+
+    cd ~/.config/sublime-text-2/Packages
+    git clone git@github.com:AndyHitchman/sublime-gherkin-auto-complete.git GherkinAutoComplete
+
+#### Windows
+
+    cd Users/<user>/AppData/Roaming/Sublime\ Text\ 2/Packages/
+    git clone git@github.com:AndyHitchman/sublime-gherkin-auto-complete.git GherkinAutoComplete
+
+Restart Sublime Text 
 
 Features
 --------
