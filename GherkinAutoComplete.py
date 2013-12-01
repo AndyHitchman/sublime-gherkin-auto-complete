@@ -1,6 +1,6 @@
 #-----------------------------------------------------------------------------------
 # Gherkin Auto-Complete Sublime Text Plugin
-# Copyright (c) 2013 Andy Hitchman
+# Copyright 2013, Andy Hitchman
 # Author: Andy Hitchman
 # Version: 0.1
 # License: MIT
@@ -44,7 +44,7 @@ class GherkinPhrases:
 		self.phrases = []
 	
 	def clearPhrasesForFeatureFile(self, file_name):
-		self.phrases = [phrase for phrase in self.phrases if phrase.file_name != file_name]
+		self.phrases = [phrase for phrase in self.phrases if phrase.file_name() != file_name]
 
 	def addPhrase(self, predicate, phrase, feature_name, file_name):
 		self.phrases.append(Phrase(phrase, predicate, feature_name, file_name))
