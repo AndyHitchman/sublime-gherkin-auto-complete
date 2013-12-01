@@ -20,7 +20,7 @@ For example:
         And the user can type letters from the phrases to quickly find and re-use the phrase
 
 1. Press `<ctrl>-space` to show the auto-complete box.
-2. Type pf. The auto complete will show two matching phrases.
+2. Type a few characters from words that matches a phrase above. The auto complete will show matching phrases.
 3. Press enter (or tab) to insert. 
 
 Table data for a phrase is also inserted.
