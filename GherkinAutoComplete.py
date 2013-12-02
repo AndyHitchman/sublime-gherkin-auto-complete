@@ -60,7 +60,7 @@ class GherkinPhrases:
 		for phrase in self.phrases:
 			if word in phrase.phrase():
 				autocomplete_list.append( (phrase.phrase() + '\t' + phrase.predicate() + ' in ' + phrase.feature_name(), phrase.phrase()) ) 
-		return autocomplete_list
+		return autocomplete_list.sort()
 
 
 	def is_feature_file(self, filename):
@@ -92,7 +92,6 @@ class GherkinAutoComplete(GherkinPhrases, sublime_plugin.EventListener):
 
 		if self.is_feature_file(view.file_name()):
 			return self.get_autocomplete_list(prefix)
-			completions.sort()
 
 		return (completions, sublime.INHIBIT_EXPLICIT_COMPLETIONS)
 
