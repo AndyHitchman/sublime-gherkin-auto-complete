@@ -60,7 +60,7 @@ class GherkinPhrases:
 		for phrase in self.phrases:
 			if word in phrase.phrase():
 				autocomplete_list.append( (phrase.phrase() + '\t' + phrase.predicate() + ' in ' + phrase.feature_name(), phrase.phrase()) ) 
-		return autocomplete_list.sort()
+		return autocomplete_list
 
 
 	def is_feature_file(self, filename):
@@ -70,14 +70,19 @@ class GherkinPhrases:
 class GherkinAutoComplete(GherkinPhrases, sublime_plugin.EventListener):
 	all_indexed = False
 
+	def on_activated_async(self, view):
+		if not self.all_indexed:
+			self.all_indexed = True
+			self.index_all_features(view.window().folders())
+
 	def on_post_save_async(self, view):
 		if self.is_feature_file(view.file_name()):
 			if self.all_indexed:
 				self.clearPhrasesForFeatureFile(view.file_name())
 				self.index_file(view.file_name())
 			else:
-				self.index_all_features(view.window().folders())
 				self.all_indexed = True
+				self.index_all_features(view.window().folders())
 
 	def index_all_features(self, open_folders):
 		self.clearPhrases()
